@@ -144,8 +144,10 @@ function Scene() {
   const [positions, setPositions] = useState<Float32Array | null>(null);
 
   useEffect(() => {
-    generateLogoPoints("/logo.png", 4000).then(setPositions);
-  }, []);
+  const isMobile = window.innerWidth < 768;
+  const count = isMobile ? 1500 : 4000;
+  generateLogoPoints("/logo.png", count).then(setPositions);
+}, []);
 
   if (!positions) return null;
 
@@ -157,6 +159,7 @@ export function ParticleLogoCanvas() {
     <Canvas
       camera={{ position: [0, 0, 5], fov: 50 }}
       gl={{ antialias: true, alpha: true }}
+      dpr={[1, 1.5]}
     >
       <ambientLight intensity={0.5} />
       <pointLight position={[5, 5, 5]} intensity={1} />

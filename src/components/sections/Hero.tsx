@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { HERO_CONTENT } from "@/lib/constants";
+import { ParticleLogoCanvas } from "@/components/three/ParticleLogoCanvas";
 
 const container: Variants = {
   hidden: {},
@@ -86,9 +87,9 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right side — placeholder for Phase 4 particle logo */}
-        <div className="hidden lg:flex items-center justify-center h-[500px] rounded-2xl border border-border/50 text-muted text-sm font-mono">
-          [ Three.js particle logo goes here — Phase 4 ]
+        {/* Right side — interactive particle logo */}
+           <div className="hidden lg:block h-[500px]">
+           <ParticleLogoCanvas />
         </div>
       </div>
 
