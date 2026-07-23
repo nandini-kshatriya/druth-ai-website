@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -24,7 +25,8 @@ export default function RootLayout({
       <body className="antialiased">
         <LenisProvider>
           <Navbar />
-          {children}
+            {children}
+            <Footer />
         </LenisProvider>
       </body>
     </html>

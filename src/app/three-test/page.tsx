@@ -1,11 +1,15 @@
-import { ParticleLogoCanvas } from "@/components/three/ParticleLogoCanvas";
+import { Hero } from "@/components/sections/Hero";
+import { WhatWeBuild } from "@/components/sections/WhatWeBuild";
+import { BuiltLikeCode } from "@/components/sections/BuiltLikeCode";
+import { Contact } from "@/components/sections/Contact";
 
-export default function ThreeTestPage() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center">
-      <div className="w-[600px] h-[600px]">
-        <ParticleLogoCanvas />
-      </div>
+    <main>
+      <Hero />
+      <WhatWeBuild />
+      <BuiltLikeCode />
+      <Contact />
     </main>
   );
 }

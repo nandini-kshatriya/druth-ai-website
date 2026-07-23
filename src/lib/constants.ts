@@ -46,3 +46,58 @@ export const WHAT_WE_BUILD = {
     },
   ],
 };
+export const BUILT_LIKE_CODE = {
+  eyebrow: "OUR APPROACH",
+  heading: "Built like code.\nDeployed like infra.",
+  paragraph:
+    "We combine cutting-edge research with engineering discipline to deliver systems that are robust, reliable, and ready for real-world impact.",
+  checklist: [
+    "Research-driven engineering",
+    "Production-first mindset",
+    "Open source at our core",
+  ],
+  codeLines: [
+    { text: "// Build intelligent systems", type: "comment" },
+    { text: "// that make an impact", type: "comment" },
+    { text: "", type: "blank" },
+    { text: "import druth", type: "keyword" },
+    { text: "", type: "blank" },
+    { text: "system = druth.build({", type: "code" },
+    { text: '    agents: true,', type: "code" },
+    { text: '    models: "custom",', type: "code" },
+    { text: '    memory: "long_term",', type: "code" },
+    { text: '    infrastructure: "production"', type: "code" },
+    { text: "})", type: "code" },
+    { text: "", type: "blank" },
+    { text: "system.deploy()", type: "code" },
+    { text: "// AI systems that actually work.", type: "comment" },
+  ],
+};
+export const CONTACT_CONTENT = {
+  eyebrow: "CONTACT",
+  headingLines: [
+    { text: "Let's build something", accent: false },
+    { text: "exceptional", accent: true },
+    { text: "together.", accent: false },
+  ],
+  paragraph:
+    "Whether you're launching an AI product, need a production-grade agent, or want to fine-tune a model for your domain — we respond within 24 hours.",
+  email: "hello@druthai.com",
+  office: "Hyderabad, IN",
+  hours: "Mon–Fri, 9AM–6PM IST",
+  budgetOptions: [
+    "Select a range",
+    "$10k – $25k",
+    "$25k – $50k",
+    "$50k – $100k",
+    "$100k+",
+  ],
+};
+
+export const FOOTER_LINKS = {
+  platform: ["AI Agents", "Model Systems", "Memory Layers", "Infrastructure"],
+  useCases: ["Autonomous Workflows", "Fine-Tuning", "RAG Systems", "Evals"],
+  resources: ["Blog", "Docs", "Research", "Case Studies"],
+  company: ["About", "Careers", "Contact Us", "Agency"],
+  community: ["X", "GitHub", "Discord", "LinkedIn"],
+};
