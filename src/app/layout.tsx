@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { LenisProvider } from "@/components/LenisProvider";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -22,13 +19,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={jetbrainsMono.variable}>
-      <body className="antialiased">
-        <LenisProvider>
-          <Navbar />
-            {children}
-            <Footer />
-        </LenisProvider>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
