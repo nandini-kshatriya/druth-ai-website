@@ -1,6 +1,7 @@
 import { LenisProvider } from "@/components/LenisProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SanityLive } from "@/sanity/lib/live";
 
 export default function SiteLayout({
   children,
@@ -12,6 +13,7 @@ export default function SiteLayout({
       <Navbar />
       {children}
       <Footer />
+      <SanityLive />
     </LenisProvider>
   );
 }
