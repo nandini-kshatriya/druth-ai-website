@@ -88,9 +88,9 @@ export function Hero() {
         </div>
 
         {/* Right side — interactive particle logo */}
-           <div className="hidden lg:block h-[500px]">
-           <ParticleLogoCanvas />
-        </div>
+           <div className="hidden lg:block h-[600px] -mr-8">
+            <ParticleLogoCanvas />
+          </div>
       </div>
 
       <motion.div

@@ -69,7 +69,8 @@ function ParticlePoints({ positions }: { positions: Float32Array }) {
 
     // Rotation + breathing (from 4.4)
     pointsRef.current.rotation.y += delta * 0.15;
-    const breathe = 1 + Math.sin(clockRef.current * 0.8) * 0.03;
+    const baseScale = 2;
+    const breathe = baseScale + Math.sin(clockRef.current * 0.8) * 0.04;
     pointsRef.current.scale.setScalar(breathe);
     pointsRef.current.rotation.x = Math.sin(clockRef.current * 0.3) * 0.05;
     pointsRef.current.rotation.z = Math.cos(clockRef.current * 0.25) * 0.03;
