@@ -39,7 +39,7 @@ export async function generateLogoPoints(
     // Normalize to -1.5..1.5 range, centered, flip Y (image Y is inverted vs 3D Y)
     const nx = (p.x / size - 0.5) * 3;
     const ny = -(p.y / size - 0.5) * 3;
-    const nz = (Math.random() - 0.5) * 0.3; // slight depth variance
+    const nz = (Math.random() - 0.5) * 0.12; // reduced depth variance — flatter, sharper shape
 
     points[i * 3] = nx;
     points[i * 3 + 1] = ny;

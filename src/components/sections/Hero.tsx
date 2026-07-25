@@ -20,7 +20,6 @@ const line: Variants = {
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-24">
-      {/* Ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-accent/10 blur-[160px]" />
         <div
@@ -49,13 +48,15 @@ export function Hero() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="text-6xl md:text-7xl font-bold leading-[1.05] mb-8"
+            className="font-display text-7xl md:text-8xl font-extrabold leading-[1.05] tracking-tight mb-8"
           >
             {HERO_CONTENT.headlineLines.map((l, i) => (
               <motion.span
                 key={i}
                 variants={line}
-                className={`block ${l.accent ? "text-accent" : "text-foreground"}`}
+                className={`block ${
+                  l.accent ? "text-accent italic" : "text-foreground"
+                }`}
               >
                 {l.text}
               </motion.span>
@@ -87,10 +88,9 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right side — interactive particle logo */}
-           <div className="hidden lg:block h-[600px] -mr-8">
-            <ParticleLogoCanvas />
-          </div>
+        <div className="hidden lg:block h-[600px] -mr-8">
+          <ParticleLogoCanvas />
+        </div>
       </div>
 
       <motion.div
