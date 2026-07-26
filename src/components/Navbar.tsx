@@ -20,8 +20,8 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-border"
-          : "bg-transparent border-b border-transparent"
+          ? "bg-background/70 backdrop-blur-xl border-border"
+          : "bg-transparent border-transparent"
       }`}
     >
       <nav className="flex items-center justify-between px-8 py-4 max-w-[1440px] mx-auto">
