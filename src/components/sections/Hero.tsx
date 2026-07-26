@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { HERO_CONTENT } from "@/lib/constants";
 import { ParticleLogoCanvas } from "@/components/three/ParticleLogoCanvas";
+import Link from "next/link";
 
 const container: Variants = {
   hidden: {},
@@ -83,7 +84,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 1.1 }}
             className="flex gap-4"
           >
-            <Button variant="primary">{HERO_CONTENT.ctaPrimary}</Button>
+            <Link href="/case-studies">
+              <Button variant="primary">{HERO_CONTENT.ctaPrimary}</Button>
+            </Link>
             <Button variant="outline">{HERO_CONTENT.ctaSecondary}</Button>
           </motion.div>
         </div>
