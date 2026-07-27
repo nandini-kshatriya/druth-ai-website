@@ -5,6 +5,7 @@ import { RESEARCH_BY_SLUG_QUERY, RESEARCH_QUERY } from "@/sanity/lib/queries";
 import { getImageUrl } from "@/sanity/lib/imageHelpers";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { PortableTextRenderer } from "@/components/PortableTextRenderer";
+import { BackLink } from "@/components/ui/BackLink";
 
 export const revalidate = 60;
 
@@ -54,6 +55,7 @@ export default async function ResearchArticlePage({
   return (
     <main className="min-h-screen pt-40 pb-32">
       <article className="max-w-3xl mx-auto px-8">
+        <BackLink href="/research" label="Back to Research" />
         <SectionLabel>RESEARCH</SectionLabel>
         <h1 className="font-display text-4xl md:text-5xl font-bold mt-6 mb-6 leading-tight">
           {article.title}

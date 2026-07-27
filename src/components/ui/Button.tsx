@@ -15,7 +15,7 @@ export function Button({
   return (
     <button
       className={cn(
-        "px-5 py-3 text-xs font-mono font-medium tracking-wide uppercase transition-all duration-200",
+        "px-5 py-3 text-xs font-mono font-medium tracking-wide uppercase rounded-xl transition-all duration-200",
         variant === "primary" &&
           "bg-accent text-black hover:bg-accent/90 hover:shadow-[0_0_20px_rgba(62,207,142,0.35)]",
         variant === "outline" &&

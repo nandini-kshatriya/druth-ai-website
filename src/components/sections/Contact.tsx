@@ -13,7 +13,7 @@ const labelClasses =
 
 export function Contact() {
   return (
-    <section className="py-32 border-t border-border">
+    <section id="contact" className="py-32 border-t border-border scroll-mt-24">
       <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <SectionLabel>{CONTACT_CONTENT.eyebrow}</SectionLabel>

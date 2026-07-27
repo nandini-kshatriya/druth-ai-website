@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   { label: "About", href: "#about" },
 ] as const;
 
-export const HERO_CONTENT = {
+/*export const HERO_CONTENT = {
   eyebrow: "PRODUCTION-GRADE AI SYSTEMS -- EST. 2022",
   headlineLines: [
     { text: "We build AI", accent: false },
@@ -15,6 +15,16 @@ export const HERO_CONTENT = {
     { text: "that actually", accent: false },
     { text: "work.", accent: false },
   ],
+  paragraph:
+    "Druth AI is a research-driven AI engineering company. We build agents, fine-tuned models, memory architectures and the infrastructure that makes them production-ready.",
+  ctaPrimary: "View Case Studies",
+  ctaSecondary: "Talk To Us",
+  scrollLabel: "Scroll to explore",
+};*/
+export const HERO_CONTENT = {
+  headline: "We build AI ",
+  headlineAccent: "systems",
+  headlineEnd: " that actually work.",
   paragraph:
     "Druth AI is a research-driven AI engineering company. We build agents, fine-tuned models, memory architectures and the infrastructure that makes them production-ready.",
   ctaPrimary: "View Case Studies",

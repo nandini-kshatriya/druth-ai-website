@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BackLink } from "@/components/ui/BackLink";
 import { sanityFetch } from "@/sanity/lib/live";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { getImageUrl } from "@/sanity/lib/imageHelpers";

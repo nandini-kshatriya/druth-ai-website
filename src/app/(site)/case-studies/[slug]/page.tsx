@@ -5,6 +5,7 @@ import { CASE_STUDY_BY_SLUG_QUERY, CASE_STUDIES_QUERY } from "@/sanity/lib/queri
 import { getImageUrl } from "@/sanity/lib/imageHelpers";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { PortableTextRenderer } from "@/components/PortableTextRenderer";
+import { BackLink } from "@/components/ui/BackLink";
 
 export const revalidate = 60;
 
@@ -54,6 +55,7 @@ export default async function CaseStudyPage({
   return (
     <main className="min-h-screen pt-40 pb-32">
       <article className="max-w-3xl mx-auto px-8">
+        <BackLink href="/case-studies" label="Back to Case Studies" />
         <SectionLabel>CASE STUDY</SectionLabel>
         {study.clientName && (
           <p className="text-accent font-mono text-sm uppercase tracking-wide mt-6">
