@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FOOTER_LINKS } from "@/lib/constants";
+import { FooterParticles } from "@/components/FooterParticles";
 
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   return (
@@ -26,14 +27,16 @@ export function Footer() {
   return (
     <footer className="relative border-t border-border overflow-hidden">
       {/* Starfield dot background */}
-      <div
+      {/*<div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           backgroundImage:
             "radial-gradient(circle, var(--color-border) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
-      />
+      />*/}
+      {/* Interactive particle background */}
+        <FooterParticles />
       <div
         className="pointer-events-none absolute inset-0"
         style={{

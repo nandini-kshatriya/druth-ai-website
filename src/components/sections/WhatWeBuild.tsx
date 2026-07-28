@@ -83,7 +83,8 @@ export function WhatWeBuild() {
     <section className="relative overflow-hidden bg-[#08150f] py-24 px-6 md:px-16 border-t border-border">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(62,207,142,0.15),transparent_60%)]" />
 
-      <div className="relative mx-auto max-w-[1440px]">
+      {/*<div className="relative mx-auto max-w-[1440px]">*/}
+      <div className="relative mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
             <SectionLabel>{WHAT_WE_BUILD.eyebrow}</SectionLabel>

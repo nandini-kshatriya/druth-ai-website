@@ -9,7 +9,8 @@ import { BUILT_LIKE_CODE } from "@/lib/constants";
 export function BuiltLikeCode() {
   return (
     <section className="py-32 border-t border-border">
-      <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/*<div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">*/}
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
           <SectionLabel>{BUILT_LIKE_CODE.eyebrow}</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6 leading-tight whitespace-pre-line">

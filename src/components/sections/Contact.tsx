@@ -14,7 +14,8 @@ const labelClasses =
 export function Contact() {
   return (
     <section id="contact" className="py-32 border-t border-border scroll-mt-24">
-      <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      {/*<div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">*/}
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <SectionLabel>{CONTACT_CONTENT.eyebrow}</SectionLabel>
           <h2 className="text-5xl md:text-6xl font-bold mt-6 mb-6 leading-[1.05]">
