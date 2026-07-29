@@ -104,6 +104,25 @@ export const CONTACT_CONTENT = {
   ],
 };
 
+export const BLOG_CATEGORIES = [
+  "All Articles",
+  "Engineering",
+  "Infrastructure",
+  "AI Systems",
+  "Research",
+  "Case Studies",
+  "Announcements",
+];
+export const CASE_STUDY_FILTERS = [
+  "All",
+  "RAG Systems",
+  "Agents",
+  "Fine-Tuning",
+  "Infrastructure",
+  "Research Automation",
+  "Inference Cost",
+];
+
 export const FOOTER_LINKS = {
   platform: ["AI Agents", "Model Systems", "Memory Layers", "Infrastructure"],
   useCases: ["Autonomous Workflows", "Fine-Tuning", "RAG Systems", "Evals"],

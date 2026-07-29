@@ -1,11 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import { BackLink } from "@/components/ui/BackLink";
 import { sanityFetch } from "@/sanity/lib/live";
 import { CASE_STUDIES_QUERY } from "@/sanity/lib/queries";
-import { getImageUrl } from "@/sanity/lib/imageHelpers";
-import { SectionLabel } from "@/components/ui/SectionLabel";
-import { GlassCard } from "@/components/ui/GlassCard";
+import { CaseStudiesClient } from "@/components/case-studies/CaseStudiesClient";
+import { FolderStack } from "@/components/case-studies/FolderStack";
 
 export const revalidate = 60;
 
@@ -16,45 +12,32 @@ export default async function CaseStudiesIndexPage() {
   return (
     <main className="min-h-screen pt-40 pb-32">
       <div className="max-w-[1440px] mx-auto px-8">
-        <SectionLabel>CASE STUDIES</SectionLabel>
-        <h1 className="font-display text-5xl font-bold mt-6 mb-16">
-          Real systems, real results.
-        </h1>
+        <div className="relative mb-16 pb-16 min-h-[540px] overflow-hidden">
+          <FolderStack />
+
+          <div className="relative z-10 max-w-xl">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-accent mb-6">
+              <span className="h-px w-4 bg-accent" />
+              CASE STUDIES
+            </div>
+            <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
+              Results that
+              <br />
+              <span className="text-accent italic">speak for themselves</span>
+            </h1>
+            <p className="text-muted mt-6 leading-relaxed">
+              Real deployments. Measurable outcomes. No demos — only
+              production systems that changed how our clients operate.
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-border mb-12" />
 
         {caseStudies.length === 0 ? (
           <p className="text-muted">No case studies published yet.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study: any) => (
-              <Link key={study._id} href={`/case-studies/${study.slug.current}`}>
-                <GlassCard className="overflow-hidden h-full group hover:border-accent/50 transition-colors">
-                  {study.featuredImage && (
-                    <div className="relative w-full h-48">
-                      <Image
-                        src={getImageUrl(study.featuredImage, 600)}
-                        alt={study.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    {study.clientName && (
-                      <p className="text-xs font-mono text-accent uppercase tracking-wide mb-2">
-                        {study.clientName}
-                      </p>
-                    )}
-                    <h2 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
-                      {study.title}
-                    </h2>
-                    <p className="text-muted text-sm leading-relaxed">
-                      {study.summary}
-                    </p>
-                  </div>
-                </GlassCard>
-              </Link>
-            ))}
-          </div>
+          <CaseStudiesClient caseStudies={caseStudies} />
         )}
       </div>
     </main>

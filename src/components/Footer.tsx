@@ -66,9 +66,22 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted font-mono">
-          <span>© {new Date().getFullYear()} Druth AI. All rights reserved.</span>
-          <span>Built with care in Hyderabad</span>
-        </div>
+  <span>© {new Date().getFullYear()} Druth AI. All rights reserved.</span>
+  <div className="flex items-center gap-6 uppercase tracking-wide">
+    <Link href="/research" className="hover:text-accent transition-colors">
+      Research
+    </Link>
+    <Link href="/case-studies" className="hover:text-accent transition-colors">
+      Case Studies
+    </Link>
+    <Link href="#open-source" className="hover:text-accent transition-colors">
+      Open Source
+    </Link>
+    <Link href="#privacy" className="hover:text-accent transition-colors">
+      Privacy
+    </Link>
+  </div>
+</div>
       </div>
     </footer>
   );
