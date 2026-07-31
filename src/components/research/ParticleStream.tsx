@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -109,4 +109,4 @@ export function ParticleStream() {
   }, []);
 
   return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />;
-}
+}*/

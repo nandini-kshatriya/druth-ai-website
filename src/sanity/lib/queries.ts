@@ -188,11 +188,16 @@ export const CASE_STUDIES_QUERY = groq`
     title,
     slug,
     clientName,
-    summary,
+    industry,
+    serviceCategory,
+    featuredBadge,
+    shortDescription,
     featuredImage,
     publishedAt,
-    categories[]->{title, slug},
-    results
+    readingTime,
+    featured,
+    metrics,
+    categories[]->{title, slug}
   }
 `;
 
@@ -202,14 +207,45 @@ export const CASE_STUDY_BY_SLUG_QUERY = groq`
     title,
     slug,
     clientName,
-    summary,
-    body,
-    results,
+    industry,
+    serviceCategory,
+    featuredBadge,
+    shortDescription,
     featuredImage,
     publishedAt,
+    readingTime,
     author->{name, avatar, role},
+    metrics,
+    sections[]{
+      ...,
+      _type == "pageSection" => {
+        sectionType,
+        title,
+        subtitle,
+        anchorId,
+        content,
+        image,
+        quote,
+        callout,
+        showDivider,
+        backgroundStyle,
+        twoColumnLayout,
+        fullWidthLayout,
+        challengeBlocks,
+        solutionBlocks,
+        resultBlocks,
+        timelineItems,
+        technologies
+      }
+    },
+    projectDetails,
+    technologies,
+    relatedCaseStudies[]->{
+      _id, title, slug, clientName, featuredImage, shortDescription
+    },
     categories[]->{title, slug},
     tags,
+    cta,
     seo
   }
 `;

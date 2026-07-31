@@ -5,7 +5,7 @@ import { RESEARCH_QUERY } from "@/sanity/lib/queries";
 import { getImageUrl } from "@/sanity/lib/imageHelpers";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { LetterGrid } from "@/components/research/LetterGrid";
-import { ParticleStream } from "@/components/research/ParticleStream";
+//import { ParticleStream } from "@/components/research/ParticleStream";
 import { FocusGrid } from "@/components/research/FocusGrid";
 
 export const revalidate = 60;
@@ -46,9 +46,9 @@ export default async function ResearchIndexPage() {
     {/* Stage: Layer 2 (illuminated focus grid) + particles + tiles, all layered together */}
     <div className="hidden lg:block relative">
       <FocusGrid />
-      <div className="absolute -inset-16 z-0">
+      {/*<div className="absolute -inset-16 z-0">
         <ParticleStream />
-      </div>
+      </div>*/}
       <div className="relative z-10">
         <LetterGrid />
       </div>
