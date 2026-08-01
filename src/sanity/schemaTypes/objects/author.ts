@@ -22,5 +22,31 @@ export const author = defineType({
       title: "Role / Title",
       type: "string",
     }),
+    defineField({
+      name: "bio",
+      title: "Bio",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "linkedin",
+      title: "LinkedIn URL",
+      type: "url",
+    }),
+    defineField({
+      name: "x",
+      title: "X (Twitter) URL",
+      type: "url",
+    }),
+    defineField({
+      name: "github",
+      title: "GitHub URL",
+      type: "url",
+    }),
+    defineField({
+      name: "website",
+      title: "Website URL",
+      type: "url",
+    }),
   ],
 });
